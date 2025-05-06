@@ -3,13 +3,19 @@ import objetos.*
 
 describe "Test de las personas" {
 
- 	method initialize() {
+	var cuentaPepe
+	 	
+	method initialize() {
+		cuentaPepe = new CuentaCorriente()
+		pepe.miCuenta(cuentaPepe)
  		rebeca.cobrar(1000)
  	}
 
 	test "ahorros de les pibes" {
+		//pepe.miCuenta(cuentaPepe)
 		pepe.cobrar(2000)
 		pepe.gastar(100)
+		
 		assert.equals(1900, pepe.ahorros())
 		assert.equals(1000, rebeca.ahorros())
 	}
